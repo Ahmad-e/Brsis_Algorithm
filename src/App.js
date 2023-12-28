@@ -1,23 +1,23 @@
-import logo from './logo.svg';
 import './App.css';
+import board from "./board.js";
 
+const board1 = new board();
+
+document.addEventListener('keydown', function (event) {
+  if (event.key === 'p') {
+    board1.printArray();
+  }
+});
+
+document.addEventListener('keydown', function (event) {
+  if (event.key === 'z') {
+    board1.play();
+  }
+});
 function App() {
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      game
     </div>
   );
 }
